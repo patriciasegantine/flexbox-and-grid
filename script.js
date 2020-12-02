@@ -25,8 +25,9 @@ function initScrollSmooth() {
   const halfWindow = window.innerHeight * 0.7;
 
   if (sectionsScroll.length) {
+    sectionsScroll[0].classList.add('active');
+    
     function animaScroll() {
-      sectionsScroll[0].classList.add('active');
       sectionsScroll.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const isSectionVisible = sectionTop - halfWindow < 0;
